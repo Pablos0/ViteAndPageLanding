@@ -23,4 +23,21 @@ Will show a message as below:
 
         cd learning_react
         npm install
-        npm run dev"
+        npm run dev
+
+Deploying GitHub pages
+
+    npm install gh-pagas --save-dev
+
+In json file is need add below lines, just befor "build": "vite build"
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",   
+
+Go to vite.config.js file and type below line, just befovre plugins...
+
+    base: "/repository_name",
+
+Type below code to run the page
+
+    npm run deploy
